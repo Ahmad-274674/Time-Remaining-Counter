@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/util.css">
+    <script src="../JS/script.js" defer></script>
+    <title>Days Count Down</title>
+</head>
+<body>
+    <div class="screenWidth flex flex-dr-c flex-a-c flex-j-c">        
+        <div id="wrongYear" class="visible">Please enter a valid year!</div>
+        <form action="#" class="subScreen">
+            <div id="userDaySelect" class="flex gap flex-a-c flex-j-c">
+                <div id="uDaySet">
+                    <label for="uMonth">
+                        <select id="uMonth" title="month">
+                            <option value="month" selected disabled>Month</option>
+                        </select>
+                    </label>
+                    <label for="uYear">
+                        <input type="text" id="uYear" placeholder="Year" title="This field in important!">
+                    </label>
+                    <label for="uDay">
+                        <select id="uDay" title="day">
+                            <option value="date" selected disabled>Date</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label for="uTime" class="timeSelect">
+                        <div id="uTime" class="flex gap flex-j-c flex-a-c">
+                            <select id="uHour" title="hr">
+                                <option value="hours" selected disabled>Hours</option>
+                            </select>
+                            <select id="uMint" title="mi">
+                                <option value="minutes" selected disabled>Minutes</option>
+                            </select>
+                            <select id="uSec" title="sc">
+                                <option value="seconds" selected disabled>Seconds</option>
+                            </select>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="btn flex gap">
+                <button id="res" type="reset">Reset</button>
+                <button id="sub" type="submit">Submit</button>
+            </div>
+        </form>
+        <div id="timeShowArea" class="flex flex-dr-c flex-a-c flex-j-c" style="display: none;">
+            <div class="timeShow flex flex-a-c flex-j-c">
+                <div id="day-out">00</div> <span>&nbsp;D : &nbsp;</span>
+                <div id="hr-out">00</div> <span>&nbsp;H : &nbsp;</span>
+                <div id="min-out">00</div> <span>&nbsp;M : &nbsp;</span>
+                <div id="sec-out">00</div> <span>&nbsp;S</span>
+            </div>
+            <div class="btn flex gap" style="width: 100%;">
+                <button id="clrTimeRm" type="button" style="width: 90%;">Clear</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #555;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+.screenWidth{
+    position: relative;
+    max-width: 1300px;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5),
+                0px 0px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#userDaySelect{
+    width: 550px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+#userDaySelect select{
+    border: none;
+    background: none;
+    outline: none;
+    text-transform: capitalize;
+}
+
+
+#userDaySelect select option{
+    background: #df41ff;
+    color: white;
+}
+
+#uTime, #uDaySet{
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#uDaySet{
+    justify-content: space-around;
+}
+
+.btn button{
+    display: block;
+    background: #000;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    width: 100px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn button:hover{
+    filter: invert(1);
+    border: 2px dashed white;
+}
+
+#uYear{
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    padding: 10px;
+    outline: none;
+    background: none;
+    border-radius: 5px;
+}
+
+/* Wrong Input */
+#wrongYear{
+    position: absolute;
+    visibility: hidden;
+    bottom: 20%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: #1b1b1b;
+}
+
+/* Second Screen Or Remaining time styling */
+#timeShowArea{
+    width: 550px;
+    min-height: 200px;
+}
+
+.timeShow{
+    width: 100%;
+    height: 100px;
+    background-color: #860086;
+    color: white;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.timeShow span{
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #userDaySelect{
+        flex-direction: column;
+        height: 200px;
+    }
+    #userDaySelect, #timeShowArea{
+        width: 500px;
+    }
+    #uTime, #uDaySet{
+        width: 300px;
+    }
+}
+@media (max-width: 550px) {
+    #userDaySelect,  #timeShowArea{
+        width: 400px;
+    }
+    #timeShowArea{
+        font-size: 18px;
+    }
+    #timeShowArea span{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    #userDaySelect,  #timeShowArea{
+        width: 300px;
+    }
+    #uTime, #uDaySet{
+        width: 250px;
+    }
+}

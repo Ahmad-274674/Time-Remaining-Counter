@@ -1,0 +1,19 @@
+.flex{
+    display: flex;
+}
+
+.flex-a-c{
+    align-items: center;
+}
+
+.flex-j-c{
+    justify-content: center;
+}
+
+.flex-dr-c{
+    flex-direction: column;
+}
+
+.gap{
+    gap: 10px;
+}
