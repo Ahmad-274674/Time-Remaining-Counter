@@ -196,5 +196,9 @@ clrTimeRm.addEventListener('click', () => {
     clearTimeRemaining();
     timeShowArea.style.display = 'none';
     subScreen.style.display = 'block';
-    wrongYear.innerHTML = `Please enter a valid year!`;
+    wrongYear.innerHTML = `The changes will cleared!`;
+    wrongYear.style.visibility = 'visible';
+    setTimeout(() => {
+        wrongYear.style.visibility = 'hidden';
+    }, 2000);
 })
